@@ -1,5 +1,5 @@
 {% set name = "scikit-geometry" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/scikit-geometry/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 89f7d3a6795d657cdf75b0c3d20d8929765e4ea8eae6da6a61edb538c9664603
+  sha256: 1f49fe69754c74d644e37f343f28f302c022b1a10fcf8cfd5326eccfa83e0b41
   patches:
     - osx_cpp14.patch  # [osx]
 
