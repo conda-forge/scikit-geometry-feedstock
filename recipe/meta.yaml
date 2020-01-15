@@ -12,8 +12,8 @@ source:
     - osx_cpp14.patch  # [osx]
 
 build:
-  number: 0
-  skip: true  # [win]
+  number: 1
+  skip: true  # [py<35]
 
 requirements:
   build:
@@ -21,18 +21,18 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - pip
-    - python 3.*
+    - python
     - pybind11
     - cgal-cpp
     - cgal
   run:
-    - python 3.*
+    - python
     - cgal-cpp
     - cgal
     - vs2015_runtime  # [win]
     - mpir  # [win]
     - mpfr
-    - gmp
+    - gmp  # [not win]
     - cgal-cpp
     - boost-cpp
     - matplotlib-base
@@ -40,6 +40,7 @@ requirements:
 test:
   imports:
     - skgeom
+    - skgeom.draw
 
 about:
   home: https://github.com/scikit-geometry/scikit-geometry
