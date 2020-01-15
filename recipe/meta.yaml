@@ -12,8 +12,7 @@ source:
     - osx_cpp14.patch  # [osx]
 
 build:
-  number: 0
-  skip: true  # [win]
+  number: 1
 
 requirements:
   build:
@@ -40,6 +39,7 @@ requirements:
 test:
   imports:
     - skgeom
+    - skgeom.Point2
 
 about:
   home: https://github.com/scikit-geometry/scikit-geometry
