@@ -13,7 +13,7 @@ source:
 
 build:
   number: 1
-  skip: true  # [win and py<35]
+  skip: true  # [py<35]
 
 requirements:
   build:
@@ -21,12 +21,12 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - pip
-    - python 3
+    - python
     - pybind11
     - cgal-cpp
     - cgal
   run:
-    - python 3
+    - python
     - cgal-cpp
     - cgal
     - vs2015_runtime  # [win]
