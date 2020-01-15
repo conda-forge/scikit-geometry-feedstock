@@ -21,12 +21,12 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - pip
-    - python 3.*
+    - python 3
     - pybind11
     - cgal-cpp
     - cgal
   run:
-    - python 3.*
+    - python 3
     - cgal-cpp
     - cgal
     - vs2015_runtime  # [win]
