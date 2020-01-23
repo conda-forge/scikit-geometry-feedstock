@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/scikit-geometry/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: dd071709c14763756c0040d806f7dba5e86358ebcb44518151cff6491446b14e
+  sha256: 11d2ca3361b680b27e21ce651cf9f3a9dc017195626c73627cc1d6ee6b745ff4
   patches:
     - osx_cpp14.patch  # [osx]
 
