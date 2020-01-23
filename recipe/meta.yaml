@@ -28,6 +28,11 @@ requirements:
     - python
     - cgal-cpp 5.0
     - matplotlib-base
+    # Just to silence the warnings, but not adding vs2015_runtime for win...
+    - boost-cpp
+    - mpir  # [win]
+    - gmp  # [not win]
+    - mpfr
 
 test:
   imports:
