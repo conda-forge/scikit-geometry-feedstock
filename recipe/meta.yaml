@@ -1,5 +1,5 @@
 {% set name = "scikit-geometry" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/scikit-geometry/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 1f49fe69754c74d644e37f343f28f302c022b1a10fcf8cfd5326eccfa83e0b41
+  sha256: 11d2ca3361b680b27e21ce651cf9f3a9dc017195626c73627cc1d6ee6b745ff4
   patches:
     - osx_cpp14.patch  # [osx]
 
@@ -23,19 +23,16 @@ requirements:
     - pip
     - python
     - pybind11
-    - cgal-cpp
-    - cgal
+    - cgal-cpp 5.0
   run:
     - python
-    - cgal-cpp
-    - cgal
-    - vs2015_runtime  # [win]
-    - mpir  # [win]
-    - mpfr
-    - gmp  # [not win]
-    - cgal-cpp
-    - boost-cpp
+    - cgal-cpp 5.0
     - matplotlib-base
+    # Just to silence the warnings, but not adding vs2015_runtime for win...
+    - boost-cpp
+    - mpir  # [win]
+    - gmp  # [not win]
+    - mpfr
 
 test:
   imports:
