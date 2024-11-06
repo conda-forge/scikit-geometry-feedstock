@@ -12,7 +12,7 @@ source:
     - osx_cpp14.patch  # [osx]
 
 build:
-  number: 4
+  number: 5
   skip: true  # [py<35]
 
 requirements:
@@ -30,7 +30,7 @@ requirements:
     - matplotlib-base
     # Just to silence the warnings, but not adding vs2015_runtime for win...
     - boost-cpp
-    - mpir  # [win]
+    - gmp  # [win]
     - gmp  # [not win]
     - mpfr
 
